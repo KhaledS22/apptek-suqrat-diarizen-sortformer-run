@@ -9,13 +9,12 @@
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6K_6th_sou_1365_0.wav", "session_name": "6K_6th_sou_1365_0", "recording_id": "6K_6th_sou_1365_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6K_6th_sou_2212_0.wav", "session_name": "6K_6th_sou_2212_0", "recording_id": "6K_6th_sou_2212_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6K_7th_shm_2107_0.wav", "session_name": "6K_7th_shm_2107_0", "recording_id": "6K_7th_shm_2107_0"}
+{"audio_filepath": "<APPTEK_AUDIO_ROOT>/6k_1st_2072_0.wav", "session_name": "6k_1st_2072_0", "recording_id": "6k_1st_2072_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6k_1st_2083_0.wav", "session_name": "6k_1st_2083_0", "recording_id": "6k_1st_2083_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6k_1st_3728_0.wav", "session_name": "6k_1st_3728_0", "recording_id": "6k_1st_3728_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6k_3rd_835_0.wav", "session_name": "6k_3rd_835_0", "recording_id": "6k_3rd_835_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6k_3rd_835_1.wav", "session_name": "6k_3rd_835_1", "recording_id": "6k_3rd_835_1"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/6k_3rd_835_14.wav", "session_name": "6k_3rd_835_14", "recording_id": "6k_3rd_835_14"}
-{"audio_filepath": "<APPTEK_AUDIO_ROOT>/6k_3rd_835_7problem.wav", "session_name": "6k_3rd_835_7problem", "recording_id": "6k_3rd_835_7problem"}
-{"audio_filepath": "<APPTEK_AUDIO_ROOT>/422e1de2-552c-42c1-ae1d-e2552c02c105_1.wav", "session_name": "422e1de2-552c-42c1-ae1d-e2552c02c105_1", "recording_id": "422e1de2-552c-42c1-ae1d-e2552c02c105_1"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_111_0.wav", "session_name": "MSA_4th_AT_111_0", "recording_id": "MSA_4th_AT_111_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_13_8.wav", "session_name": "MSA_4th_AT_13_8", "recording_id": "MSA_4th_AT_13_8"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_151_0.wav", "session_name": "MSA_4th_AT_151_0", "recording_id": "MSA_4th_AT_151_0"}
@@ -28,9 +27,7 @@
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_152_0.wav", "session_name": "MSA_4th_AT_152_0", "recording_id": "MSA_4th_AT_152_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_152_1.wav", "session_name": "MSA_4th_AT_152_1", "recording_id": "MSA_4th_AT_152_1"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_152_5.wav", "session_name": "MSA_4th_AT_152_5", "recording_id": "MSA_4th_AT_152_5"}
-{"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_95_16_problem.wav", "session_name": "MSA_4th_AT_95_16_problem", "recording_id": "MSA_4th_AT_95_16_problem"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_95_18.wav", "session_name": "MSA_4th_AT_95_18", "recording_id": "MSA_4th_AT_95_18"}
-{"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_95_1_problem.wav", "session_name": "MSA_4th_AT_95_1_problem", "recording_id": "MSA_4th_AT_95_1_problem"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_AT_95_7.wav", "session_name": "MSA_4th_AT_95_7", "recording_id": "MSA_4th_AT_95_7"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_Y_125_0.wav", "session_name": "MSA_4th_Y_125_0", "recording_id": "MSA_4th_Y_125_0"}
 {"audio_filepath": "<APPTEK_AUDIO_ROOT>/MSA_4th_Y_125_1.wav", "session_name": "MSA_4th_Y_125_1", "recording_id": "MSA_4th_Y_125_1"}
