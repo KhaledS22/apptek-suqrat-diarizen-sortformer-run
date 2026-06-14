@@ -44,7 +44,14 @@ Suggested structure:
 Enter the package directory first:
 
 ```bash
-cd apptek_suqrat_diarizen_sortformer_run
+cd apptek-suqrat-diarizen-sortformer-run
+```
+
+Create the output folders first:
+
+```bash
+mkdir -p outputs/diarizen/apptek outputs/diarizen/suqrat_1_2_3
+mkdir -p outputs/sortformer_v2/apptek outputs/sortformer_v2/suqrat_1_2_3
 ```
 
 ### DiariZen
