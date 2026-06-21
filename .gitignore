@@ -1,0 +1,27 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
+.env.*
+
+# Keep folder structure only
+outputs/*
+!outputs/diarizen/
+!outputs/sortformer_v2/
+outputs/diarizen/*
+!outputs/diarizen/.gitkeep
+outputs/sortformer_v2/*
+!outputs/sortformer_v2/.gitkeep
+
+# Data and local files
+audio/
+datasets/
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.log
+*.zip
+

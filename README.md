@@ -1,96 +1,101 @@
-# AppTek + Suqrat DiariZen / Sortformer Run
+# AppTek and Suqrat DiariZen / Sortformer Run
 
-This package is for **inference only**.
+## What this repo does
 
-Please run the two diarization models below and return the **hypothesis RTTM outputs only**.
+This repo is an inference-only run package for generating hypothesis RTTM outputs on AppTek and Suqrat using DiariZen and Sortformer v2.
 
-## Models
+## Why it was created
 
-- `BUT-FIT/diarizen-wavlm-large-s80-md-v2`
-- `nvidia/diar_streaming_sortformer_4spk-v2.1`
+This repo was created so the team can run heavy diarization inference on a station or GPU environment without needing the full evaluation workspace. It keeps the run package small, clear, and easy to hand off.
 
-## Input manifests
+## Main workflow
 
-- `manifests/apptek_available_now.jsonl`
-- `manifests/suqrat_full_1_2_3.jsonl`
+1. Prepare the station paths for the audio roots.
+2. Use the provided manifests.
+3. Run DiariZen or Sortformer v2 with the local scripts.
+4. Return the RTTM hypothesis outputs only.
 
-## Audio path placeholders
+## Input
 
-The manifests use placeholders because the audio will be on the station.
+- AppTek audio files
+- Suqrat audio files
+- JSONL manifests
+- NeMo root for Sortformer
 
-Please replace:
+## Output
 
-- `<APPTEK_AUDIO_ROOT>`
-- `<SUQRAT_AUDIO_ROOT>`
+- RTTM hypothesis files under `outputs/diarizen/`
+- RTTM hypothesis files under `outputs/sortformer_v2/`
 
-with the actual audio locations on the station before running.
+## Important scripts
 
-## Required outputs
+| Script | Purpose |
+| ------ | ------- |
+| `scripts/run_diarizen.sh` | Shell entry point for DiariZen runs. |
+| `scripts/run_diarizen.py` | Python runner for DiariZen on manifest or folder input. |
+| `scripts/run_sortformer.sh` | Shell entry point for Sortformer runs. |
+| `scripts/run_sortformer.py` | Python runner for Sortformer on manifest or folder input. |
+| `scripts/common.py` | Shared helper logic used by both runners. |
 
-Please return only the generated **RTTM hypothesis outputs** under:
+## How to run
 
-- `outputs/diarizen/`
-- `outputs/sortformer_v2/`
-
-Suggested structure:
-
-- `outputs/diarizen/apptek/`
-- `outputs/diarizen/suqrat_1_2_3/`
-- `outputs/sortformer_v2/apptek/`
-- `outputs/sortformer_v2/suqrat_1_2_3/`
-
-## Run commands
-
-Enter the package directory first:
+Enter the repo:
 
 ```bash
-cd apptek-suqrat-diarizen-sortformer-run
+cd <repo-folder>
 ```
 
-Create the output folders first:
+Create output folders:
 
 ```bash
 mkdir -p outputs/diarizen/apptek outputs/diarizen/suqrat_1_2_3
 mkdir -p outputs/sortformer_v2/apptek outputs/sortformer_v2/suqrat_1_2_3
 ```
 
-### DiariZen
+Replace the manifest placeholders with station audio roots:
 
-AppTek:
+- `<APPTEK_AUDIO_ROOT>`
+- `<SUQRAT_AUDIO_ROOT>`
+
+Run DiariZen on AppTek:
 
 ```bash
 zsh scripts/run_diarizen.sh manifests/apptek_available_now.jsonl outputs/diarizen/apptek python manifest
 ```
 
-Suqrat_1 + Suqrat_2 + Suqrat_3:
+Run DiariZen on Suqrat:
 
 ```bash
 zsh scripts/run_diarizen.sh manifests/suqrat_full_1_2_3.jsonl outputs/diarizen/suqrat_1_2_3 python manifest
 ```
 
-### Sortformer v2
-
-Before running Sortformer, set:
+Run Sortformer on AppTek:
 
 ```bash
-export NEMO_ROOT=<NEMO_ROOT>
+zsh scripts/run_sortformer.sh manifests/apptek_available_now.jsonl outputs/sortformer_v2/apptek <NEMO_ROOT> streaming python manifest
 ```
 
-AppTek:
+Run Sortformer on Suqrat:
 
 ```bash
-zsh scripts/run_sortformer.sh manifests/apptek_available_now.jsonl outputs/sortformer_v2/apptek "$NEMO_ROOT" streaming python manifest
+zsh scripts/run_sortformer.sh manifests/suqrat_full_1_2_3.jsonl outputs/sortformer_v2/suqrat_1_2_3 <NEMO_ROOT> streaming python manifest
 ```
 
-Suqrat_1 + Suqrat_2 + Suqrat_3:
+## What is NOT included
 
-```bash
-zsh scripts/run_sortformer.sh manifests/suqrat_full_1_2_3.jsonl outputs/sortformer_v2/suqrat_1_2_3 "$NEMO_ROOT" streaming python manifest
-```
+This repo does not include:
 
-## What to return
+- raw audio
+- dataset dumps
+- reference RTTM
+- metrics
+- logs
+- tokens
+- credentials
+- large outputs
 
-Please return only the generated **RTTM hypothesis outputs** from:
+## Notes for the team
 
-- `outputs/diarizen/`
-- `outputs/sortformer_v2/`
+- This repo is intentionally small and handoff-friendly.
+- It is for inference only, not evaluation.
+- The only expected return from the run is RTTM hypothesis output.
