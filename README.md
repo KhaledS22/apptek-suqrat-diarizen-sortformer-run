@@ -31,6 +31,8 @@ This repo was created so the team can run heavy diarization inference on a stati
 
 | Script | Purpose |
 | ------ | ------- |
+| `manifests/apptek_available_now.jsonl` | Manifest for the AppTek matched set. |
+| `manifests/suqrat_full_1_2_3.jsonl` | Manifest for the three full Suqrat files. |
 | `scripts/run_diarizen.sh` | Shell entry point for DiariZen runs. |
 | `scripts/run_diarizen.py` | Python runner for DiariZen on manifest or folder input. |
 | `scripts/run_sortformer.sh` | Shell entry point for Sortformer runs. |
@@ -99,3 +101,4 @@ This repo does not include:
 - This repo is intentionally small and handoff-friendly.
 - It is for inference only, not evaluation.
 - The only expected return from the run is RTTM hypothesis output.
+- `outputs/*/.gitkeep` files are only placeholders to preserve empty output folders in Git; they are not real model outputs.
